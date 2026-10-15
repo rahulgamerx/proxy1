@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070a0e">
+<title>RGX Tactical Console</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+<header class="top">
+  <a class="logo" href="#"><span class="logo-icon">RGX</span><span class="logo-name">TACTICAL<span> CONSOLE</span></span></a>
+  <div class="top-right"><span class="demo"><i></i> SIMULATION</span><button class="menu" aria-label="Menu">☰</button></div>
+</header>
+<main>
+  <div class="breadcrumb"><span>CONSOLE</span><b>/</b><span>STATUS OVERVIEW</span></div>
+  <section class="headline">
+    <div><div class="overline"><span class="cross">✣</span> PLAYER ENVIRONMENT</div><h1>STATUS <em>OVERVIEW</em></h1><p>Visual telemetry dashboard · No live game connection</p></div>
+    <div class="clock"><span>LOCAL TIME</span><strong id="clock">--:--:--</strong><small>IST · UTC +05:30</small></div>
+  </section>
+  <div class="sim-banner"><span class="banner-icon">!</span><div><strong>SIMULATED ENVIRONMENT</strong><p>All readings below are fictional demo values. This page does not connect to Free Fire or access game data.</p></div><span class="banner-tag">DEMO BUILD 01</span></div>
+
+  <section class="metrics">
+    <article class="metric"><div class="metric-head"><span>REGION NODE</span><span class="mini-icon">⌖</span></div><div class="metric-value">IND <small>/ IN</small></div><div class="metric-foot"><i class="dot green"></i> India region · simulated</div></article>
+    <article class="metric"><div class="metric-head"><span>LATENCY</span><span class="mini-icon">⌁</span></div><div class="metric-value"><span id="ping">042</span><small> MS</small></div><div class="metric-foot"><i class="dot green"></i> Demo ping value</div></article>
+    <article class="metric"><div class="metric-head"><span>SESSION LINK</span><span class="mini-icon">↗</span></div><div class="metric-value status-value"><i class="dot green"></i> CONNECTED</div><div class="metric-foot">Simulated · not game verified</div></article>
+  </section>
+
+  <section class="section-title"><div><span class="overline">01 / FEATURE MONITOR</span><h2>Feature telemetry</h2></div><span class="small-pill"><i class="dot lime"></i> LOCAL DEMO</span></section>
+  <section class="features">
+    <article class="feature">
+      <div class="feature-head"><div class="feature-icon lime-icon">◎</div><div class="feature-ident"><span>MODULE 01</span><h3>Headshot Assist</h3></div><span id="headshot-badge" class="badge on">ACTIVE</span></div>
+      <p class="feature-desc">Visual state indicator for the mock environment.</p>
+      <div class="telemetry"><div><span>MODULE STATE</span><strong id="headshot-state">ENABLED</strong></div><div><span>DATA SOURCE</span><strong>LOCAL DEMO</strong></div></div>
+      <div class="progress"><span id="headshot-bar" style="width:86%"></span></div>
+      <div class="feature-bottom"><span><i class="dot lime"></i> DEMO SIGNAL</span><button data-toggle="headshot" class="action active">DISABLE MODULE <b>−</b></button></div>
+    </article>
+    <article class="feature">
+      <div class="feature-head"><div class="feature-icon cyan-icon">⌖</div><div class="feature-ident"><span>MODULE 02</span><h3>ESP Overlay</h3></div><span id="esp-badge" class="badge on">ACTIVE</span></div>
+      <p class="feature-desc">Visual state indicator for the mock environment.</p>
+      <div class="telemetry"><div><span>MODULE STATE</span><strong id="esp-state">ENABLED</strong></div><div><span>DATA SOURCE</span><strong>LOCAL DEMO</strong></div></div>
+      <div class="progress cyan-progress"><span id="esp-bar" style="width:72%"></span></div>
+      <div class="feature-bottom"><span><i class="dot cyan"></i> DEMO SIGNAL</span><button data-toggle="esp" class="action active">DISABLE MODULE <b>−</b></button></div>
+    </article>
+  </section>
+
+  <section class="lower-grid">
+    <article class="panel activity"><div class="panel-head"><div><span class="overline">02 / CONNECTION</span><h2>Node diagnostics</h2></div><span class="live-label"><i class="dot green"></i> SIMULATED</span></div>
+      <div class="diag-row"><span class="diag-icon">◉</span><div><strong>India region node</strong><small>Virtual endpoint · IN-01</small></div><span class="diag-status good">READY</span></div>
+      <div class="diag-row"><span class="diag-icon">⌁</span><div><strong>Game service handshake</strong><small>No live endpoint configured</small></div><span class="diag-status warn">UNVERIFIED</span></div>
+      <div class="diag-row"><span class="diag-icon">⟳</span><div><strong>Last local refresh</strong><small id="last-refresh">Just now</small></div><span class="diag-status">LOCAL</span></div>
+      <button id="refresh" class="refresh"><span>↻</span> RUN DEMO DIAGNOSTICS</button>
+    </article>
+    <article class="panel log"><div class="panel-head"><div><span class="overline">03 / SYSTEM LOG</span><h2>Event stream</h2></div><span class="log-count">03 EVENTS</span></div>
+      <div class="log-list" id="logs"><div class="log-line"><time>00:00:01</time><i class="log-dot"></i><p><b>UI_BOOT</b><span>Console initialized in demo mode</span></p></div><div class="log-line"><time>00:00:02</time><i class="log-dot"></i><p><b>NODE_SIM</b><span>India region profile loaded</span></p></div><div class="log-line"><time>00:00:03</time><i class="log-dot cyan-dot"></i><p><b>DATA_SOURCE</b><span>Local mock values only</span></p></div></div>
+      <div class="log-note"><span>ⓘ</span> Events are generated locally by this demo.</div>
+    </article>
+  </section>
+  <footer><div class="footer-mark">RGX <span>TACTICAL CONSOLE</span></div><div>FAN-MADE UI CONCEPT · NOT AFFILIATED WITH GARENA</div><div class="foot-right">BUILD <b>01.0.6</b></div></footer>
+</main>
+<script src="script.js"></script>
+</body></html>
